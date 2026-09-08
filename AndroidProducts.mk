@@ -15,7 +15,7 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_t482.mk
+    $(LOCAL_DIR)/twrp_T482L.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_t482-eng    
+    twrp_T482L-eng    
