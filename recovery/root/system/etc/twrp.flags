@@ -18,6 +18,16 @@
 /metadata                 ext4     /dev/block/platform/bootdevice/by-name/md_udc            flags=display="metadata"
 /cache                    ext4     /dev/block/platform/bootdevice/by-name/cache             flags=display="cache";wipeingui
 
+# Logical partitions
+/system_root    ext4     /dev/block/mapper/system     flags=display="System";logical
+/system_image   emmc     /dev/block/mapper/system     flags=display="System Image";backup=1;flashimg=1;logical
+/vendor         ext4     /dev/block/mapper/vendor     flags=display="Vendor";logical
+/vendor_image   emmc     /dev/block/mapper/vendor     flags=display="Vendor Image";backup=1;flashimg=1;logical
+/product        ext4     /dev/block/mapper/product    flags=display="Product";logical
+/product_image  emmc     /dev/block/mapper/product    flags=display="Product Image";backup=1;flashimg=1;logical
+/super          emmc     /dev/block/platform/bootdevice/by-name/super  flags=display="Super";backup=1;flashimg=1
+
+
 # IMEI and modem related
 /protect_f                ext4     /dev/block/platform/bootdevice/by-name/protect1          flags=display="protect_f";backup=1
 /protect_s                ext4     /dev/block/platform/bootdevice/by-name/protect2          flags=display="protect_s";backup=1
